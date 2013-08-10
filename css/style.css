@@ -1,0 +1,56 @@
+/* Put your CSS here */
+html, body {
+    margin: 20px;
+}
+
+body {
+  font-size: 16px;
+  font-size: 1em;
+  font-size: 1rem;
+  color: #222;
+}
+
+
+
+#wrap {
+  width: 80%;
+  margin:0 auto;
+}
+
+nav {
+  width: 55%;
+  float: right;
+  clear: both;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+  nav ul {
+    list-style: none;
+    width: 100%;
+    margin:0;
+    padding:0;
+  }
+    nav li {
+      float: left;
+      margin: 0 0 0 1em;
+    }
+      nav a {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #fff;
+      }
+      nav ul ul {
+        display: none;
+        position: absolute;
+        top:19px;
+        left:73px;
+      }
+        nav li:hover ul {
+          display: block;
+        }
+
+
+
+
+

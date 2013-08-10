@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Ember Starter Kit</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/foundation.min.css"/>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  
+<script type='text/x-handlebars' data-template-name='application'>
+  <h1>{{name}}</h1>
+
+  <iframe {{ bindAttr src="url" }} ></iframe>
+</script>
+
+
+<script type='text/x-handlebars' data-template-name='application'>
+  <div class='container'>
+      <nav class='top-bar fixed'>
+        <ul class=''>
+          <li>{{#linkTo "index"}}Home{{/linkTo}}</li>
+          <li class="has-dropdown">{{#linkTo "about"}}About{{/linkTo}}
+            <ul class='dropdown'>
+              <li class='has-dropdown'>{{#linkTo "about.team"}}Team{{/linkTo}}</li>
+            </ul>
+          </li>
+          <li>{{#linkTo "contact"}}Contact{{/linkTo}}</li>
+          <li>{{#linkTo "bookmarks"}}Bookmarks{{/linkTo}}</li>
+        </ul>
+      </nav>
+  </div><!-- end container -->
+    
+    <div class='container'>
+      <div class='row'>
+        {{outlet}}
+      </div>
+    </div>
+
+  
+</script>
+
+
+  <script type="text/x-handlebars" data-template-name="bookmarks">
+    <h1>Bookmark Listing</h1>
+    
+    <table class='twelve'>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>URL</th>
+        </tr>
+      </thead>
+      {{#each bookmark in controller}}
+        <tr>
+          <td>{{bookmark.name}}</td>
+          <td>{{bookmark.url}}</td>
+        </tr>
+      {{/each}} 
+    </table>
+  </script>
+
+
+  <script type="text/x-handlebars" data-template-name="about">
+    <h1>About us</h1>
+    {{outlet}}
+  </script>
+
+  <script type="text/x-handlebars" data-template-name="contact">
+    <h1>Contact Page!</h1>
+  </script>
+  
+  <script type="text/x-handlebars" data-template-name="about/team">
+    <h2>Meet the team</h2>
+  </script> 
+
+  <script src="js/libs/jquery-1.9.1.js"></script>
+  <script src="js/libs/handlebars-1.0.0-rc.4.js"></script>
+  <script src="js/libs/ember-1.0.0-rc.6.1.js"></script>
+  <script src-"js/vendor/custom.modernizr.js"></script>
+  <script src="js/vendor/foundation.min.js"></script>
+  <script src="js/vendor/foundation.app.js"></script>
+  <script src="js/app/app.js"></script>
+  <script src="js/app/router.js"></script>
+  <script src="js/app/controllers/bookmarks_controller.js"></script>
+  <script src="js/app/controllers/bookmark_controller.js"></script>
+</body>
+</html>
