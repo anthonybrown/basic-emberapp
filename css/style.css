@@ -3,54 +3,53 @@ html, body {
     margin: 20px;
 }
 
-body {
-  font-size: 16px;
-  font-size: 1em;
-  font-size: 1rem;
-  color: #222;
-}
-
-
-
-#wrap {
-  width: 80%;
-  margin:0 auto;
+::selection {
+  background: firebrick;
+  text-shadow: none;
+  color: white;
 }
 
 nav {
-  width: 55%;
+  width: 50%;
+  height: 40px;
   float: right;
-  clear: both;
   margin: 0;
-  padding: 0;
-  color: white;
+  padding:0;
 }
-  nav ul {
-    list-style: none;
-    width: 100%;
-    margin:0;
-    padding:0;
+  nav li {
+    float: left;
   }
-    nav li {
-      float: left;
-      margin: 0 0 0 1em;
+    nav a {
+      text-decoration: none;
+      color: #888;
     }
-      nav a {
-        text-decoration: none;
-        text-transform: uppercase;
-        color: #fff;
-      }
-      nav ul ul {
-        display: none;
-        position: absolute;
-        top:19px;
-        left:73px;
-      }
-        nav li:hover ul {
-          display: block;
-        }
+      nav a:hover { color: firebrick; text-decoration: underline; }
 
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
 
+li {
+	background-color: #f9f9f9;
+	padding: 10px;
+	margin-bottom: 10px;
+	box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
 
+}
 
+li img {
+	border: 1px solid #999;
+	vertical-align: top;
+	margin-right: 10px;
+}
+
+div.about {
+	background-color: #ff9;
+	padding: 10px;
+}
+
+.nav { margin-bottom: 40px; margin-top: -40px; }
+.nav li { display:inline; }
 
