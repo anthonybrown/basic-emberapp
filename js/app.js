@@ -17,7 +17,7 @@ App.IndexRoute = Ember.Route.extend({
   
   model: function() {
     'use strict';
-    return App.RedditLink.findAll('sexy');
+    return App.RedditLink.findAll('cute');
   }
 
 });
@@ -35,7 +35,7 @@ App.IndexController = Ember.ObjectController.extend({
       this.set('model', App.RedditLink.findAll(value));
 
       // clear out the input field
-      this.set('subreddit');
+      this.set('subreddit', '');
     }
   }
 });
@@ -68,7 +68,3 @@ App.RedditLink = Ember.Object.extend({
     }
   
   });
-
-
-
-
